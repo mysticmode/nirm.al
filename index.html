@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/mysticmode/home/favicon.png">
     <title>Nirmal Kumar R</title>
     <style>
       * {
@@ -12,69 +13,75 @@
       }
 
       body {
-        font-family: verdana;
-        font-size: 13px;
-        max-width: 46em;
+        font-family: sans-serif;
+        font-size: 14px;
+	line-height: 1.4;
+        max-width: 30em;
       }
 
       header {
-        margin: 1em 1em 1em 9em;
+        margin: 1em;
       }
 
       nav {
         display: flex;
-        flex-direction: column;
         align-items: start;
-        margin-left: 1em;
-        float: left;
+	justify-content: center;
       }
 
       nav a {
-        background-color: #BF1717;
-        font-family: verdana;
-        color: white;
-        font-size: 0.8rem;
-        text-shadow: 0px 0px 1px #cccccc;
-        min-width: 70px;
-        padding: 0.3em 0.5em;
-        text-decoration: none;
-        box-shadow: 1px 2px 2px #dfb7b7 inset;
-        border-bottom: 4px solid #992727;
-        border-right: 3px solid #f29595;
-        border-left: 2px solid #b77272;
-        border-top: 1px solid #ac3e3e;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
+	background-color: #BF1717;
+	font-family: sans-serif;
+	color: white;
+	font-size: 0.8rem;
+	text-align: center;
+	text-shadow: 0px 0px 1px #cccccc;
+	min-width: 70px;
+	padding: 0.3em 0.5em 0.2em;
+	text-decoration: none;
+	box-shadow: 1px 2px 2px #eba2a2 inset;
+	border-bottom: 4px solid #992727;
+	border-right: 2px solid #992727;
+	border-left: 1px solid #992727;
+	border-top: 1px solid #ac3e3e;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
       }
 
       p {
-        margin: 2em 0;
+        margin: 1em 0;
+      }
+
+      .home {
+	margin-top: 1em;
       }
 
       .home,
       .content-wrapper {
-        margin-left: 9em;
+        margin-left: 1em;
       }
 
-      .content-wrapper {
-        margin-top: 1em;
+      .home img {
+	display: block;
       }
 
       .content-title {
         color: #663333;
         font-weight: bold;
-        margin-left: 9em;
+        margin-left: 1em;
       }
 
       .contact {
         background-color: #ffcc33;
         padding: 0.6em;
+	font-size: 0.8rem;
       }
 
       footer {
         color: #cccccc;
-        margin: 3em 0 3em 9em;
+        margin: 3em 0 3em 1em;
+	font-size: 0.8rem;
       }
 
       footer hr {
@@ -85,7 +92,7 @@
   <body>
     <header>
       <div>
-        <img loading="lazy" src="https://ik.imagekit.io/mysticmode/tr:w-479/home/name.png" alt="My Full Name - Nirmal Kumar R">
+        <img loading="lazy" src="https://ik.imagekit.io/mysticmode/home/name.png" alt="My Full Name - Nirmal Kumar R" width="400px">
       </div>
     </header>
     
@@ -98,13 +105,13 @@
     </nav>
 
     <section class="home">
-      <img loading="lazy" src="https://ik.imagekit.io/mysticmode/tr:w-479/home/ashram.jpg" alt="A picture of an ashram garden" width="479px">
+      <img loading="lazy" src="https://ik.imagekit.io/mysticmode/home/ashram.jpg" alt="A picture of an ashram garden" width="400px">
     </section>
 
     <section class="content-wrapper">
       <div class="content">
         <p>This is my personal website. A place where you can read all my public musings. Rest of it is my internal flight and experience which I cannot put it into words although I try my best.</p>
-        <p class="contact">You can connect with me on <a rel="me" href="https://mastodon.social/@tildezero">Mastodon</a> or via <a href="mailto:inbox@nirm.al">email</a>.
+        <p class="contact">You can connect with me on <a rel="me" href="https://mastodon.social/@tildezero">Mastodon</a> or via <a href="mailto:tildezero@posteo.net">email</a>.
       </div>
     </section>
 
