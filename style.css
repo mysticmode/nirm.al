@@ -51,18 +51,42 @@ img {
   width: 400px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  line-height: 1.6;
+}
+
+ul li:before {
+  background-color: #BF1717;
+  border-radius: 0;
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 2px;
+  height: 6px;
+  width: 6px;
+}
+
 .home {
   margin-top: 1em;
 }
 
 .home,
+main,
 .content-wrapper {
   margin-left: 1em;
 }
 
-.content-title {
+.content-wrapper h3 {
   color: #663333;
   font-weight: bold;
+}
+
+.date {
+  color: #7d7d7d;
 }
 
 .contact {
