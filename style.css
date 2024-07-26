@@ -19,6 +19,7 @@ nav {
   display: flex;
   align-items: start;
   justify-content: center;
+  margin: 2em 0 3em;
 }
 
 nav a {
@@ -45,6 +46,11 @@ p {
   margin: 1em 0;
 }
 
+img {
+  display: block;
+  width: 400px;
+}
+
 .home {
   margin-top: 1em;
 }
@@ -52,10 +58,6 @@ p {
 .home,
 .content-wrapper {
   margin-left: 1em;
-}
-
-.home img {
-  display: block;
 }
 
 .content-title {
