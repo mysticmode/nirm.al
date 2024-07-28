@@ -104,3 +104,34 @@ footer {
 footer hr {
   margin-bottom: 1em;
 }
+
+@media screen and (max-width: 425px) {
+  body {
+    width: 100%;
+    max-width: none;
+  }
+
+  img {
+    width: 284px;
+    margin: 0 auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home,
+  main,
+  .content-wrapper {
+    margin-left: 0;
+    width: 100%;
+    padding: 1em;
+  }
+
+  footer {
+    margin: 0 0 2em 0;
+    padding: 1em;
+    width: 100%;
+  }
+}
