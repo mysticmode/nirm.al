@@ -3,10 +3,11 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
 - hut
 environment:
+  repo: mysticmode.srht.site
   site: nirm.al
 tasks:
 - package: |
-    cd $site
+    cd $repo
     tar -cvz . > ../site.tar.gz
 - upload: |
     hut pages publish -d $site site.tar.gz
