@@ -130,6 +130,26 @@ main ul li span {
   display: block;
 }
 
+hr {
+  position: relative;
+  display: block;
+  height: 1.20rem;
+  margin: calc(1.20rem * 1.5) 0;
+  border: none;
+  color: #000;
+}
+
+hr::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: calc(1.20rem / 2 - 2px);
+  left: 0;
+  width: 100%;
+  border-top: calc(2px * 3) double #000;
+  height: 0;
+}
+
 @media only screen and (max-width: 700px) {
   body {
     width: 100%;
