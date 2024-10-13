@@ -61,6 +61,21 @@ p {
   hyphens: auto;
 }
 
+span.pre {
+  background: #DDD;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  margin: 1em 0;
+  padding: 0.2em 0.4em;
+  background: #ddd;
+  white-space: nowrap;
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .header {
   display: flex;
   align-items: center;
