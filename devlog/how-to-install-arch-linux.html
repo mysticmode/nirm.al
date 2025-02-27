@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/img/favicon.png" />
-    <title>Nirmal Kumar R - How to install Arch Linux</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <a href="/" class="header">
-      <div class="logo">
-        <img src="/img/nklogo.png" width="90px" />
-      </div>
-      <p><img src="/img/nirmal-banner.png" height="70px"></p>
-    </a>
 
-    <nav>
-      <a href="/blog.html">Blog</a>
-      <a href="/poems.html">Poems</a>
-      <a href="/devlog.html">Devlog</a>
-      <a href="mailto:nirmal@posteo.net">Contact</a>
-    </nav>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/png" href="/img/favicon.png" />
+	<title>Nirmal Kumar R - How to install Arch Linux</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
 
-    <section class="content-wrapper">
-      <div class="title">How to install Arch Linux <span class="date">[2024-10-13]</span></div>
+<body>
+	<a href="/" class="header">
+		<div class="logo">
+			<img src="/img/nklogo.png" width="90px" />
+		</div>
+		<p><img src="/img/nirmal-banner.png" height="70px"></p>
+	</a>
 
-      <div class="content">
-        <p>
-	  This post emphises my way of installing Arch Linux. If you think, I
-	  could improve upon something on this post, you can start shouting at
-	  me via my email address which you can find in this website.
-        </p>
-	<p>
-	  The Arch Linux is my favorite flavor of Linux to use as my daily 
-	  driver. It's simplicity combined with a vast and detailed documentation
-	  is splendid. The installation of Arch Linux on the official page is
-	  minimal and intentionally kept this way to install only the packages
-	  we require.
-	</p>
-	<p>
-	  You can find the ISO image download on the 
-	  <a href="https://archlinux.org/download/">Arch Linux website</a>. I'll
-	  keep the creating of a bootable disk to the exercise for the readers.
-	</p>
-	<p>
-	  These are the steps, I'm going to focus on writing here.
-	  <ul>
-	    <li>
-	      <a href="#connectToInternet">Connecting to the internet</a>
-	    </li>
-	  </ul>
-      	</p>
-	<p>
-	<h4 id="connectToInternet"><a href="#connectToInternet">#</a> Connecting to the internet</h4>
-	  Enter the command <span class="pre">ip link</span> on your terminal.
-	  You will see the list of Ethernet or Wireless network interfaces.
-	  Make sure, the network interface appears on the list.
-	</p>
-	<p>
-	We are going to use and config <span class="pre">wpa_supplicant</span>.
-	First step is to open this file:
-	  <pre>
+	<nav>
+		<a href="/blog.html">Blog</a>
+		<a href="/poems.html">Poems</a>
+		<a href="/devlog.html">Devlog</a>
+		<a href="mailto:tildezero@gmail.com">Contact</a>
+	</nav>
+
+	<section class="content-wrapper">
+		<div class="title">How to install Arch Linux <span class="date">[2024-10-13]</span></div>
+
+		<div class="content">
+			<p>
+				This post emphises my way of installing Arch Linux. If you think, I
+				could improve upon something on this post, you can start shouting at
+				me via my email address which you can find in this website.
+			</p>
+			<p>
+				The Arch Linux is my favorite flavor of Linux to use as my daily
+				driver. It's simplicity combined with a vast and detailed documentation
+				is splendid. The installation of Arch Linux on the official page is
+				minimal and intentionally kept this way to install only the packages
+				we require.
+			</p>
+			<p>
+				You can find the ISO image download on the
+				<a href="https://archlinux.org/download/">Arch Linux website</a>. I'll
+				keep the creating of a bootable disk to the exercise for the readers.
+			</p>
+			<p>
+				These are the steps, I'm going to focus on writing here.
+			<ul>
+				<li>
+					<a href="#connectToInternet">Connecting to the internet</a>
+				</li>
+			</ul>
+			</p>
+			<p>
+			<h4 id="connectToInternet"><a href="#connectToInternet">#</a> Connecting to the internet</h4>
+			Enter the command <span class="pre">ip link</span> on your terminal.
+			You will see the list of Ethernet or Wireless network interfaces.
+			Make sure, the network interface appears on the list.
+			</p>
+			<p>
+				We are going to use and config <span class="pre">wpa_supplicant</span>.
+				First step is to open this file:
+			<pre>
 	    vim /etc/wpa_supplicant/wpa_supplicant.conf
 	  </pre>
-	and enter the network credentials (in my case, it is my mobile personal
-	hotspot):
-	  <pre>
+			and enter the network credentials (in my case, it is my mobile personal
+			hotspot):
+			<pre>
 	    network={<br/>
 	    &nbsp;&nbsp;ssid="&lt;your-hotspot-name&gt;"<br/>
 	    &nbsp;&nbsp;psk="&lt;your-hostspot-password&gt;"<br/>
 	    }
 	  </pre>
-	Save and close the editor. Now type in the below command with your
-	network interface name and enter:
-	  <pre>
+			Save and close the editor. Now type in the below command with your
+			network interface name and enter:
+			<pre>
 	  wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
 	  </pre>
-	</p>
-      </div>
-    </section>
+			</p>
+		</div>
+	</section>
 
-    <footer>
-      <hr />
-      © Nirmal Kumar R. All original text, is licensed under a
-      <a href="http://creativecommons.org/licenses/by/4.0/"
-        >Creative Commons Attribution 4.0 International License</a
-      >. Source code of this website can be found
-      <a href="https://git.sr.ht/~mysticmode/nirm.al">here</a>.
-    </footer>
-  </body>
+	<footer>
+		<hr />
+		© Nirmal Kumar R. All original text, is licensed under a
+		<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+			License</a>. Source code of this website can be found
+		<a href="https://github.com/mysticmode/nirm.al">here</a>.
+	</footer>
+</body>
+
 </html>
